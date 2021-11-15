@@ -3,3 +3,23 @@ version: "@version@"
 author: "Siro_256 @ffffff_256"
 main: "dev.siro256.spigotpl.floatingguide.FloatingGuide"
 api-version: "1.17"
+
+commands:
+  test:
+    description: "Test command."
+    permission: fg.command.test
+
+permissions:
+  fg.*:
+    description: "Permission of all."
+    default: op
+    children:
+      - fg.command.*
+  fg.command.*:
+    description: "Permission of all commands."
+    default: op
+    children:
+      - fg.command.test
+  fg.command.test:
+    description: "Permission of test command."
+    default: op
