@@ -2,6 +2,8 @@ package dev.siro256.spigotpl.floatingguide
 
 import dev.siro256.spigotpl.floatingguide.command.TestCommand
 import dev.siro256.spigotpl.floatingguide.command.WandCommand
+import org.bukkit.Location
+import org.bukkit.entity.Player
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.logging.Logger
 
@@ -31,5 +33,7 @@ class FloatingGuide: JavaPlugin() {
 
         lateinit var logger: Logger
             private set
+
+        val wandPosition = mutableMapOf<Player, Pair<Location?, Location?>>()
     }
 }
