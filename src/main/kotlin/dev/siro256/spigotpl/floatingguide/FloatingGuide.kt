@@ -1,6 +1,7 @@
 package dev.siro256.spigotpl.floatingguide
 
 import dev.siro256.spigotpl.floatingguide.command.TestCommand
+import dev.siro256.spigotpl.floatingguide.command.WandCommand
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.logging.Logger
 
@@ -13,7 +14,8 @@ class FloatingGuide: JavaPlugin() {
     override fun onEnable() {
         //Register commands
         mapOf(
-            "test" to TestCommand
+            "test" to TestCommand,
+            "wand" to WandCommand
         ).forEach { (command, executor) -> getCommand(command)?.setExecutor(executor) }
 
         logger.info("Enabled.")
