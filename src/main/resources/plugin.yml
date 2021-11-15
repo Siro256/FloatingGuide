@@ -8,6 +8,9 @@ commands:
   test:
     description: "Test command."
     permission: fg.command.test
+  wand:
+    description: "Give you a wand."
+    permission: fg.command.wand
 
 permissions:
   fg.*:
@@ -20,6 +23,10 @@ permissions:
     default: op
     children:
       - fg.command.test
+      - fg.command.wand
   fg.command.test:
     description: "Permission of test command."
+    default: op
+  fg.command.wand:
+    description: "Permission of wand command."
     default: op
