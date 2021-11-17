@@ -7,9 +7,11 @@ api-version: "1.17"
 commands:
   test:
     description: "Test command."
+    permission-message: "You don't allowed to execute this command."
     permission: fg.command.test
   wand:
     description: "Give you a wand."
+    permission-message: "You don't allowed to execute this command."
     permission: fg.command.wand
 
 permissions:
