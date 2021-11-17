@@ -26,7 +26,5 @@ permissions:
       - fg.command.wand
   fg.command.test:
     description: "Permission of test command."
-    default: op
   fg.command.wand:
     description: "Permission of wand command."
-    default: op
